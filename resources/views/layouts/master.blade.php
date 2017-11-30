@@ -9,12 +9,19 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" >
 
+    <link rel="stylesheet" href="{{URL::to('src/css/app.css')}}">
 
     @yield('styles')
 </head>
 <body>
-@yield('content')
+@include('partials.header')
+<div class="container">
+    @yield('content')
+</div>
+
+
 
 <script
         src="https://code.jquery.com/jquery-1.12.4.min.js"
