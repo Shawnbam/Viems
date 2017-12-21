@@ -18,9 +18,10 @@
                 <li><a href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i>
                         Cart bro</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>Tera Account<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>User Management<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">User</a></li>
+                        <li><a href="{{ route('user.signup') }}">SignUp</a></li>
+                        <li><a href="{{ route('user.signin') }}">SignIn</a></li>
 
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Logout</a></li>
