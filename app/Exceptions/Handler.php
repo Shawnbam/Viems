@@ -7,6 +7,8 @@ use Request;
 use Illuminate\Auth\AuthenticationException;
 use Response;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Session;
+
 class Handler extends ExceptionHandler
 {
     /**
@@ -59,6 +61,7 @@ class Handler extends ExceptionHandler
         if ($request->expectsJson()) {
             return response()->json(['error' => 'Unauthenticated.'], 401);
         } else {
+            Session::put('oldUrl', $request->url());
             return redirect()->route('user.signin');
         }
     }
